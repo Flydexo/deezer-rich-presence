@@ -13,15 +13,12 @@ let wait = 10000;
 app.get('', (req, res) => {
   res.send('Hello World!')
   const code = req.query.code;
-  console.log(code);
   let appId = '446602';
   let appSecret = 'c7c6203002bc945513e295d4bde2f9ef';
 
   if (code) {
     let err = req.query.error_reason;
-    console.log('result');
     deezer.createSession(appId, appSecret, code, function (err, result) {
-      console.log(result);
         function dede(){
           deezer.request(result.accessToken,
             {
@@ -30,7 +27,6 @@ app.get('', (req, res) => {
             },
             function done (err, result) {
               if (err) console.log(err);
-              console.log(result.data[0]);
               const song = result.data[0];
               const trackInfos = {
                 name: song.title,
@@ -40,10 +36,10 @@ app.get('', (req, res) => {
                 artist: song.artist.name,
               };
               wait = song.duration * 1000;
-              console.log(wait);
               return lol.run(client, clientId, trackInfos);
             }
           );
+          console.log(wait);
           setTimeout(dede, wait);
         }
         dede();

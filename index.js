@@ -5,7 +5,8 @@ let DZ = require('node-deezer');
 let deezer = new DZ();
 const opn = require('opn');
 const RPC = require('discord-rpc');
-const clientId = '778594949221449730';
+const config = require('./config');
+const clientId = config.clientId;
 const client = new RPC.Client({transport: 'ipc'});
 const lol = require('./rpc');
 let wait = 10000;
@@ -39,7 +40,6 @@ app.get('', (req, res) => {
               return lol.run(client, clientId, trackInfos);
             }
           );
-          console.log(wait);
           setTimeout(dede, wait);
         }
         dede();
@@ -48,7 +48,7 @@ app.get('', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`http://localhost:${port}`)
 })
 
 let appId = '446602'; // from developers.deezer.com

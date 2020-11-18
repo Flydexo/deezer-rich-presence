@@ -1,4 +1,4 @@
-module.exports.run = (client, clientId, trackInfos) => {
+module.exports.run = (client, clientId, trackInfos, scopes) => {
     client.on('ready', () => {
         client.setActivity({
           state: `Listenning ${trackInfos.name}`,
@@ -10,5 +10,5 @@ module.exports.run = (client, clientId, trackInfos) => {
         
         });
     });
-    client.login({ clientId });
+    client.login({ clientId});
 }

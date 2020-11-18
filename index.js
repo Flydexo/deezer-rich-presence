@@ -36,10 +36,12 @@ app.get('', (req, res) => {
                 explicit: song.explicit,
                 artist: song.artist.name,
               };
+              console.log(song.duration, song.title);
               wait = song.duration * 1000;
               return lol.run(client, clientId, trackInfos);
             }
           );
+          console.log(wait);
           setTimeout(dede, wait);
         }
         dede();

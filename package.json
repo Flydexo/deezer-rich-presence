@@ -1,0 +1,17 @@
+{
+  "name": "deezer-rich-presence",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord-rpc": "^3.1.4",
+    "express": "^4.17.1",
+    "node-deezer": "^0.3.3",
+    "opn": "^6.0.0"
+  }
+}

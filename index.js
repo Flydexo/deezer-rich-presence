@@ -9,7 +9,7 @@ const config = require('./config');
 const clientId = config.clientId;
 const client = new RPC.Client({transport: 'ipc'});
 const lol = require('./rpc');
-let wait = 10000;
+let wait = 1000;
 
 app.get('', (req, res) => {
   res.send('Hello World!')

@@ -37,7 +37,7 @@ app.get('', (req, res) => {
                 artist: song.artist.name,
               };
               console.log(song.duration, song.title);
-              wait = song.duration * 1000;
+              wait = song.duration * 100;
               return lol.run(client, clientId, trackInfos);
             }
           );

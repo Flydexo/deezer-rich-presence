@@ -1,6 +1,15 @@
 # deezer-rich-presence
 
 To start clone this repository
+Go to discord developper portal
+* create an application named deezer
+* add the deezer logo
+* copy the clienId
+* go in the rich presence art assets part
+* add the image you want named deezer
+
+Edit the config.js and paste your clientId
+
 Then open a terminal in this folder an execute npm .
 Normally it will open you a browser tab that asks you to login your deezer account 
 After accepting the application launch your discord and it will work

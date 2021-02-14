@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 3001;
 let DZ = require('node-deezer');
 let deezer = new DZ();
 const opn = require('opn');
@@ -54,7 +54,7 @@ app.listen(port, () => {
 })
 
 let appId = '446602'; // from developers.deezer.com
-let redirectUrl = 'http://localhost:3000'; // somewhere in your app, see below
+let redirectUrl = 'http://localhost:3001'; // somewhere in your app, see below
 let perms = ['listening_history'];
 let loginUrl = deezer.getLoginUrl(appId, redirectUrl, perms);
 opn(loginUrl);

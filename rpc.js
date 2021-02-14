@@ -10,5 +10,5 @@ module.exports.run = (client, clientId, trackInfos, scopes) => {
         
         });
     });
-    client.login({ clientId});
+    client.login({clientId});
 }
